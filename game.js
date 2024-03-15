@@ -19,7 +19,7 @@ let playerSelection = prompt("Please enter your Rock, Paper, or Scissors");
 let computerChoice = getComputerChoice ();
 
 
-// 
+// Make a function called playRound to play one round
 function playRound(playerSelection, computerChoice) {
   // First Possibility
   if (computerChoice === "Rock" && playerSelection === "Paper") {
@@ -57,6 +57,17 @@ function playRound(playerSelection, computerChoice) {
     return "It's a Draw :o"
   }
 }
-console.log(getComputerChoice());
 
-console.log(playRound(playerSelection, computerChoice));
+
+// Make a function called playGame to play a five round game that keeps score and reports a winner or loser at the end
+function playGame() {
+  playRound(playerSelection, computerChoice);
+  playRound(playerSelection, computerChoice);
+  playRound(playerSelection, computerChoice);
+  playRound(playerSelection, computerChoice);
+  playRound(playerSelection, computerChoice);
+
+  return;
+}
+
+console.log(playGame());
