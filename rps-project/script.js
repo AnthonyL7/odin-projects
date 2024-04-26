@@ -19,9 +19,20 @@ function getComputerChoice () {
 let computerScore = 0;
 let playerScore = 0;
 let tie = 0;
+//playerSelection = prompt("Please enter your Rock, Paper, or Scissors");
+// Event listeners 
+let Rocks = document.getElementById("rock");
+let Papers = document.getElementById("paper");
+let Scissors = document.getElementById("scissors");
+
+Rocks.addEventListener("click", playRound);
+Papers = addEventListener("click", playRound);
+Scissors = addEventListener("click", playRound);
+computerSelection = getComputerChoice();
 
 // Make a function called playRound to play one round
 function playRound(playerSelection, computerSelection ) {
+
   // First Possibility
   //Player wins
   if (computerSelection === "Rock" && playerSelection === "Paper") {
@@ -74,7 +85,7 @@ function playRound(playerSelection, computerSelection ) {
 
 
 // Make a function called playGame to play a five round game that keeps score and reports a winner or loser at the end
-function playGame()  {
+/*function playGame()  {
   for (let i = 0; i < 5; i++) {
     playerSelection = prompt("Please enter your Rock, Paper, or Scissors");
     computerSelection = getComputerChoice();
@@ -91,6 +102,7 @@ function playGame()  {
   } else{
     console.log("It's a tie")
   }
-};
+}; */
 
-playGame();
+
+console.log(playRound(playerSelection, computerSelection));
