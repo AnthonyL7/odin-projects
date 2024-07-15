@@ -1,15 +1,11 @@
+document.addEventListener('DOMContentLoaded', function() {
 
-let gridContainer = document.getElementById("myGrid")
+  let grid = document.getElementById('grid');
 
-function createGrid(rows, cols) {
-  for (let i = 0; i < rows; i++) {
-    for (let x = 0; x < cols; x++ ) {
-      let gridItem = document.createElement('div');
-      gridItem.className = 'grid-item';
-      gridItem.textContent = `Cell ${i + 1}-${x+1}`;
-      gridContainer.appendChild(gridItem);
-    }
+  for (let i = 0; i < 16 * 16; i++) {
+    let cell = document.createElement('div');
+    cell.className = 'grid-item';
+    grid.appendChild(cell);
   }
-}
 
-createGrid(16,16);
+});
