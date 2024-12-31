@@ -2,20 +2,3 @@ body {
   text-align: center; 
 }
 
-.container {
-  display: grid;
-  grid-template-columns: repeat(16, 1fr);
-  grid-template-rows: repeat(16, 1fr);
-  gap: 1px;
-}
-
-.cell {
-  background-color: white;
-  border: 1px solid black;
-  height: 100%;
-  transition: background-color 0.3s ease;
-}
-
-.cell:hover {
-  background-color: black;
-}

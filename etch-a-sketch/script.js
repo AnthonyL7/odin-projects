@@ -1,19 +1,19 @@
-document.addEventListener('DOMContentLoaded', () => {
+const container = document.querySelector('#container');
+container.style.display = 'flex'
+container.style.flexWrap = 'wrap'
+container.style.justifyContent = 'center'
+container.style.alignContent = 'center';
+container.style.width = '320px';
+container.style.height = '320px';
 
-  let container = document.getElementById('container');
-  let gridSize = 16;
+for (let i = 1; i <= 256; i++) {
+  const square = document.createElement('div');
+  square.textContent = 'div';
+  square.style.backgroundColor = 'red'
+  square.style.width = '20px'
+  square.style.length = '20px'
 
-  for (let i = 0; i < gridSize * gridSize; i++) {
-    let cell = document.createElement('div');
-    cell.classList.add('cell');
-    container.appendChild(cell);
 
-    cell.addEventListener('mouseenter', () => {
-      cell.classList.add('hovered');
-    });
+  container.appendChild(square)
+}
 
-    cell.addEventListener('mouseleave', () => {
-      cell.classList.remove('hovered');
-    });
-  }
-});
