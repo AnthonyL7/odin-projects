@@ -23,18 +23,69 @@ function divide(a,b) {
 console.log(divide(10,5))
 
 
-//Function Operate
-function operate(operator, num1, num2) {
-  
+const display = document.getElementById('display');
+let firstNumber = null;
+let secondNumber = null;
+let operator = null;
+
+function selectNumber(number) {
+  if (firstNumber === null) {
+    firstNumber = number;
+    display.textContent = firstNumber;
+  } else if (secondNumber === null) {
+    secondNumber = number;
+    display.textContent = secondNumber;
+  } else {
+    alert('Invalid')
+  }
 }
 
-const display = document.getElementById('display');
-let currentNumber = '';
+function selectOperator(op) {
+  if (firstNumber !== null && secondNumber === null) {
+    operator = op;
+    display.textContent = operator
+  }
+}
 
+//Function Operate
+function operate(operator, num1, num2) {
+    switch (operator) {
+      case '+':
+        return sum(num1, num2);
+      case '-':
+        return subtract(num1,num2);
+      case '*':
+        return multiply(num1,num2);
+      case '/':
+        return divide(num1,num2);
+      default: 
+        return 'Invalid operator';
+    }
+  
+  }
+
+//calculate 
+function calculate() {
+  if (firstNumber !== null && secondNumber !== null && operator !== null) {
+    const result = operate(operator, firstNumber, secondNumber);
+    display.textContent = result;
+  }
+}
+
+//Reset
+function reset() {
+  firstNumber = null;
+  secondNumber = null;
+  operator = null;
+  display.textContent = 0;
+}
+
+/*
 const clearBtn = document.getElementById('clearBtn');
 clearBtn.addEventListener('click', () => {
   currentNumber = ''
   display.textContent = 0;
+
 })
 
 const divideBtn = document.getElementById('divideBtn');
@@ -45,19 +96,19 @@ divideBtn.addEventListener('click', () => {
 
 const btn1 = document.getElementById('btn1');
 btn1.addEventListener('click', () => {
-  currentNumber = '1'
+  currentNumber = 1
   display.textContent = 1;
 })
 
 const btn2 = document.getElementById('btn2');
 btn2.addEventListener('click', () => {
-  currentNumber = '2'
+  currentNumber = 2
   display.textContent = 2;
 })
 
 const btn3 = document.getElementById('btn3');
 btn3.addEventListener('click', () => {
-  currentNumber = '3'
+  currentNumber = 3
   display.textContent = 3;
 })
 
@@ -69,19 +120,19 @@ multiBtn.addEventListener('click', () => {
 
 const btn4 = document.getElementById('btn4');
 btn4.addEventListener('click', () => {
-  currentNumber = '4'
+  currentNumber = 4
   display.textContent = 4;
 })
 
 const btn5 = document.getElementById('btn5');
 btn5.addEventListener('click', () => {
-  currentNumber = '5'
+  currentNumber = 5
   display.textContent = 5;
 })
 
 const btn6 = document.getElementById('btn6');
 btn6.addEventListener('click', () => {
-  currentNumber = '6'
+  currentNumber = 6
   display.textContent = 6;
 })
 
@@ -92,19 +143,19 @@ plusBtn.addEventListener('click', () => {
 
 const btn7 = document.getElementById('btn7');
 btn7.addEventListener('click', () => {
-  currentNumber = '7'
+  currentNumber = 7
   display.textContent = 7;
 })
 
 const btn8 = document.getElementById('btn8');
 btn8.addEventListener('click', () => {
-  currentNumber = '8'
+  currentNumber = 8
   display.textContent = 8;
 })
 
 const btn9 = document.getElementById('btn9');
 btn9.addEventListener('click', () => {
-  currentNumber = '9'
+  currentNumber = 9
   display.textContent = 9;
 })
 
@@ -115,11 +166,12 @@ minusBtn.addEventListener('click', () => {
 
 const btn0 = document.getElementById('btn0');
 btn0.addEventListener('click', () => {
-  currentNumber = '0'
+  currentNumber = 0
   display.textContent = 0;
 })
 
-const equalBtn = document.getElementById('equalBtn');
+const equalsBtn = document.getElementById('equalBtn');
 equalBtn.addEventListener('click', () => {
   display.textContent = '=';
 })
+*/
