@@ -46,32 +46,31 @@ let firstNumber = null;
 let secondNumber = null;
 let operator = null;
 
-function addToCurrentNumber(digit) {
-  currentNumber += digit;
-  display.textContent = currentNumber;
-}
-
+// Triggers when user chooses a number and display that number 
 function selectNumber(number) {
-  currentNumber += number;
-  display.textContent = currentNumber;
+  currentNumber += number; // appends second digit. Example press 1 then press 2 will be 12
+  display.textContent = currentNumber; // displays number
 }
 
+//
 function selectOperator(op) {
   if (currentNumber !== '') {
-    firstNumber = parseFloat(currentNumber);; 
+    firstNumber = parseFloat(currentNumber);; //passes currentNumber choice as a an int to first number
   } 
-  operator = op;
-  currentNumber = '';
-  display.textContent = `${firstNumber}`
+  operator = op; // sets operator to = op in order to put it as a parameter 
+  currentNumber = ''; // resets display so user can enter second digit
+  display.textContent = `${firstNumber}` // display number
 }
 
 
 //calculate 
 function calculate() {
+  // if any Number variables and operator variable is empty then it will you an error
   if ( currentNumber === '' || firstNumber == null || operator === null) {
     display.textContent = 'Error';
     return;
   }
+
   secondNumber = parseFloat(currentNumber);
   const result = operate(operator, firstNumber, secondNumber);
   display.textContent = result.toFixed(2);
