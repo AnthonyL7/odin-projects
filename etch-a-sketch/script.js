@@ -2,6 +2,15 @@ const container = document.querySelector('#container');
 const gridSizeInput = document.querySelector('#gridSize');
 const createButton = document.querySelector('#createButton');
 
+function generateRandomColor() {
+  const colors = [];
+  for(let i = 0; i < 10; i++) {
+    const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+    colors.push(randomColor);
+  }
+  return colors;
+}
+
 
 function generateGrid(size) {
 
@@ -19,7 +28,7 @@ function generateGrid(size) {
     square.style.boxSizing = 'border-box';
 
     square.addEventListener('mouseover', () => {
-    square.style.backgroundColor = 'blue';
+    square.style.backgroundColor = 'red';
     })
     container.appendChild(square);
   }
@@ -36,4 +45,5 @@ createButton.addEventListener('click', () =>{
 });
 
 generateGrid(16);
+
 
