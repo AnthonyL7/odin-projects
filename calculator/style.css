@@ -21,12 +21,13 @@ body {
 #display {
   width: 400px;
   height: 120px;
-  background-color: red;
+  background-color: rgb(97, 95, 95);
   border-radius: 30px;
   color: white;
-  padding-top: 35px;
-  padding-left: 280px;
+  padding-top: 55px;
+  padding-left: 295px;
   box-sizing: border-box; 
+  font-size: 30px;
 }
 
 #buttons  {
@@ -66,5 +67,6 @@ button {
   border: 1px solid black;
   font-size: 18px;
   cursor: pointer;
+  border-radius: 10px;
 }
 
