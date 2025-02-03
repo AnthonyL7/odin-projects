@@ -1,0 +1,30 @@
+body {
+  box-sizing: border-box;
+  display: flex;
+  margin: 0;
+}
+
+.parent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+}
+
+.child-1 {
+  width: 70%;
+  height: 100%;
+  background-image: url('unsplash.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+}
+
+.child-2 {
+  background-color: lightgrey;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
