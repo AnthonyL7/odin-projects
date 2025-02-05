@@ -12,13 +12,18 @@
     
     <!--Child 1 for image-->
     <div class="child-1">
-      
+      <div class="banner">
+        <img src="odin-lined.png" >
+        <p class="norse">Odin</p>
+      </div>
+      <footer>Photo by Artem Stoliar on Unsplash</footer>
+
     </div>
 
     <!--Child 2 for sign up forms-->
     <div class="child-2">
       <div class="heading">
-        <p>This in not a real online service! You know you need something
+        <p>This in not a real online service! You know you need something<br/>
         like this in your life to help you realize your deepest dreams.<br/> 
         Sign up <em>now</em> to get started.<br/>
         </p>
@@ -52,15 +57,22 @@
           <div class="bottom-row">
           <div class="password1">
             <label for="password">Password:</label>
-            <input type="password" id="password" name="password">
+            <input type="password" id="password" name="password" min="6" max="20">
           </div>
 
           <div class="password2">
             <label for="confirm-password">Confirm Password:</label>
-            <input type="password" id="confirm-password" name="confirm-password">
+            <input type="password" id="confirm-password" name="confirm-password" min="6" max="20">
           </div>
           </div>
       </form>
+
+      <div class="button">
+        <form>
+          <label for="create-button"></label>
+          <input type="submit" id="create-button" name="confirm-password" value="Create Account">
+        </form>
+        <p>Already have an account?</p>
     </div>
   </div>
 </body>

@@ -9,7 +9,7 @@ body {
   height: 100%;
   display: flex;
   flex-direction: row;
-  position: absolute;
+  position: fixed;
 }
 
 .child-1 {
@@ -22,11 +22,41 @@ body {
 
 }
 
+.child-1 .banner {
+  background-color: black;
+  width: 100%;
+  height: 20%;
+  opacity: 0.5;
+  display: flex;
+  align-items: center;
+  margin-top: 30%;
+  justify-content: space-around;
+}
+
+img {
+  width: 100%;
+  height: 70%;
+  object-fit: contain;
+}
+
+.norse {
+  color: white;
+  margin-right: 20px;
+}
+
+footer {
+  color: white;
+  margin-top: 300px;
+  font-size: 7px;
+  text-align: center;
+}
+
 .child-2 {
   background-color: white;
   width: 100%;
   height: 100%;
-  padding: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   white-space: nowrap;
   overflow: hidden;
 }
@@ -36,8 +66,11 @@ body {
 }
 
 .hook {
-  margin-top: 50px;
-  margin-bottom: 5px;
+  margin-bottom: 30px;
+}
+
+legend {
+  margin-bottom: 10px;
 }
 
 input, label {
@@ -46,15 +79,47 @@ input, label {
 
 label {
   font-size: 12px;
+  color: rgb(83, 83, 83);
 }
 
 .top-row, .middle-row, .bottom-row {
   display: flex;
-  justify-content: center;
-  width: 100%
+  justify-content: space-between;
+  width: 100%;
+  margin-right: 0;
+  margin-left: 0;
+  padding-right: 0;
+  padding-left: 0;
+  max-width: 55%;
 }
 
 .firstName, .password1, .email {
   margin-right: 10px;
 }
 
+.firstName, .password1, .email, .lastName, .password2, .phone {
+  margin-right: 10px;
+}
+
+.button {
+  margin-top: 20px;
+}
+
+label {
+  border-width: 2px;
+  border-color: rgb(198, 196, 196);
+}
+
+input[type=text], input[type=email], input[type=password] {
+  border: 1px solid black;
+  transition: 0.1s;
+}
+
+input[type=text]:focus, input[type=email]:focus {
+  border: 1px solid #1c55f0;
+  box-shadow: 3px 3px 3px #1c55f0;
+}
+
+input:invalid {
+  border: 2px solid red;
+}
