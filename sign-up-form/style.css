@@ -23,8 +23,38 @@ body {
 }
 
 .child-2 {
-  background-color: lightgrey;
+  background-color: white;
   width: 100%;
   height: 100%;
   padding: 10px;
+  white-space: nowrap;
+  overflow: hidden;
 }
+
+.heading {
+  margin-top: 15%;
+}
+
+.hook {
+  margin-top: 50px;
+  margin-bottom: 5px;
+}
+
+input, label {
+  display: block;
+}
+
+label {
+  font-size: 12px;
+}
+
+.top-row, .middle-row, .bottom-row {
+  display: flex;
+  justify-content: center;
+  width: 100%
+}
+
+.firstName, .password1, .email {
+  margin-right: 10px;
+}
+
