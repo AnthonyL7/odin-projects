@@ -1,0 +1,32 @@
+body {
+  box-sizing: border-box;
+
+}
+
+#container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 10px;
+}
+
+.left {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  color: black;
+}
+
+.top-right {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  color: black;
+}
+
+.content {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  color: black;
+}
