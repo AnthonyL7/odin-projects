@@ -1,32 +1,42 @@
 body {
   box-sizing: border-box;
-
+  height: 100%;
+  width: 100%
 }
 
 #container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto;
+  grid-template: 1fr 3fr / 1fr 5fr ;
   gap: 10px;
+  height: 100vh;
 }
 
 .left {
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  height: 100%;
   background-color: blue;
-  color: black;
+  color: white;
+  text-align: center;
+  grid-row: 1/4;
+  grid-column: 1/2;
 }
 
 .top-right {
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  height: 100%;
   background-color: lightblue;
   color: black;
+  text-align: center;
+  grid-row: 1;
+  grid-column: 2 / 3
 }
 
 .content {
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  height: 100%;
   background-color: red;
-  color: black;
+  color: white;
+  text-align: center;
+  grid-row: 2/4;
+  grid-column: 2/3;
 }
