@@ -37,6 +37,7 @@ body {
   grid-row: 1;
   grid-column: 2 / 3;
   display: grid;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 
 }
 
@@ -55,7 +56,6 @@ body {
   padding: 20px;
   border-radius: 12px;
   margin: 20px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .content {
@@ -67,6 +67,8 @@ body {
   grid-column: 2/3;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(3, auto);
+  margin-top: 25px;
 }
 
 .heading {
@@ -239,11 +241,6 @@ p {
   color: white;
 }
 
-.first-column {
-  grid-column: 1 / 2;
-  margin-left: 15px;
-  width: 100%
-}
 
 .first-column p {
   text-align: left;
@@ -258,6 +255,7 @@ p {
 
 .nested .Super {
   grid-row: 1 / 2;
+  grid-column: 1/2;
 }
 .nested .Impossible {
   grid-row: 2/3;
@@ -276,6 +274,7 @@ p {
   padding-top: 20px;
   padding-bottom: 40px;
   font-weight: bold;
+  width: 100%;
 }
 
 .Super p, .Impossible p, .Ad p {
@@ -283,11 +282,44 @@ p {
   font-size: 10px;
 }
 
+
+.first-column,
 .second-column {
-  grid-column: 2/3;
-  grid-template-rows: 1fr 1fr 1fr;
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  gap: 40px;
+  padding: 0 20px; 
+  gap: 40px;
 }
+
+.less {
+  grid-row: 1/2;
+}
+
+.easy {
+  grid-row: 2/3;
+}
+
+.money {
+  grid-row: 3/4;
+}
+
+.less, .easy, .money {
+  border-radius: 10px;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+  border-left: 5px solid #f4b400; /* yellow left border */
+  text-align: left;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  font-weight: bold;
+  width: 100;
+}
+
+
 
 .third-column {
   grid-column: 3/4;
 }
+
+
