@@ -282,29 +282,26 @@ p {
   font-size: 10px;
 }
 
+.first-column {
+  grid-column: 1/2;
+}
+
+.title {
+  text-align: left;
+  margin-left: 25px;
+}
+
 
 .first-column,
 .second-column {
   display: grid;
-  grid-template-rows: repeat(3, auto);
   gap: 40px;
   padding: 0 20px; 
   gap: 40px;
 }
 
-.less {
-  grid-row: 1/2;
-}
 
-.easy {
-  grid-row: 2/3;
-}
-
-.money {
-  grid-row: 3/4;
-}
-
-.less, .easy, .money {
+.card {
   border-radius: 10px;
   box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
   border-left: 5px solid #f4b400; /* yellow left border */
@@ -321,5 +318,4 @@ p {
 .third-column {
   grid-column: 3/4;
 }
-
 
