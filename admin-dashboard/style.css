@@ -68,7 +68,8 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: repeat(3, auto);
-  margin-top: 25px;
+  background-color: rgb(238, 238, 238);
+  margin-top: 20x;
 }
 
 .heading {
@@ -305,6 +306,7 @@ p {
   border-radius: 10px;
   box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
   border-left: 5px solid #f4b400; /* yellow left border */
+  background-color: white;
   text-align: left;
   padding-left: 20px;
   padding-top: 20px;
@@ -317,5 +319,29 @@ p {
 
 .third-column {
   grid-column: 3/4;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+
+}
+
+.third-column p {
+  text-align: left;
+}
+
+.announcements {
+  grid-column: 1/2;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.announcements div {
+  text-align: left;
+  margin-left: 10px;
+}
+
+.trending {
+  grid-column: 2/3;
+  border: 1px solid black;
 }
 
